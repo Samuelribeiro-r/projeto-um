@@ -1,0 +1,26 @@
+{
+    "usuarios" : [
+        {
+            "id": 1,
+            "nome": "Samuel",
+            "email": "samuel@gmail.com",
+            "senha": "12"
+        
+        },
+
+         {
+            "id": 2,
+            "nome": "Caixinhas Brito",
+            "email": "caixinhas@gamil.com",
+            "senha": "12"
+
+         },
+
+          {
+            "id": 3,
+            "nome": "FinisEFerb",
+            "email": "ferb@gmail.com",
+            "senha": "12"
+          }
+    ]
+}
