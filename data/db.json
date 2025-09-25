@@ -1,26 +1,53 @@
 {
-    "usuarios" : [
-        {
-            "id": 1,
-            "nome": "Samuel",
-            "email": "samuel@gmail.com",
-            "senha": "12"
-        
-        },
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Samuel",
+      "email": "samuel@gmail.com",
+      "senha": "12"
+    },
 
-         {
-            "id": 2,
-            "nome": "Caixinhas Brito",
-            "email": "caixinhas@gamil.com",
-            "senha": "12"
+    {
+      "id": 2,
+      "nome": "Caixinhas Brito",
+      "email": "caixinhas@gamil.com",
+      "senha": "12"
+    },
 
-         },
+    {
+      "id": 3,
+      "nome": "FinisEFerb",
+      "email": "ferb@gmail.com",
+      "senha": "12"
+    }
+  ],
 
-          {
-            "id": 3,
-            "nome": "FinisEFerb",
-            "email": "ferb@gmail.com",
-            "senha": "12"
-          }
-    ]
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Shampoo do cr7",
+      "preço": 10.0,
+      "quantidade": 5,
+      "descricao": "esse e um shampoo do cr7 QUALIDADE GARANTIDA.",
+      "categoria": "Higiene Pessoal"
+    },
+
+    {
+      "id": 2,
+      "nome": "Caixa de som JBL",
+      "preço": 50.0,
+      "quantidade": 2,
+      "descricao": "Caixa de som JBL QUALIDADE GARANTIDA.",
+      "categoria": "Eletrónicos"
+    },
+
+    {
+      "id": 3,
+      "nome": "Teclado Gamer",
+      "preço": 100.0,
+      "quantidade": 1,
+      "descricao": "Teclado gamer Òtimo para jogadores malucos!!!!",
+      "categoria": "Informática"
+    }
+  ]
 }

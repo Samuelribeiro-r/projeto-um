@@ -8,11 +8,12 @@ const port = 5000
  // criando uma porta para o servidor   
 const path = require('path')
 // importando o path
-const Caminho = path.join(__dirname, "views")
+const caminho = path.join(__dirname, "views")
 
 // importações
 // importa as rotas de usuário
 const userRoutes = require("./routes/userRoutes")
+const produtoRoutes = require("./routes/produtoRoutes")
 // cria uma rota principal para as sub rotas de usuario
 
 // Interpretador de json Para tratar as informações do body
@@ -20,6 +21,8 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
 app.use("/usuarios", userRoutes)
+
+app.use("/produtos", produtoRoutes)
 
 // definindo o ejs como view engine
 app.set('view engine', 'ejs')
