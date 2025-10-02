@@ -1,29 +1,26 @@
-const express = require("express")
+const express = require("express");
 
-const roteador = express.Router()
+const roteador = express.Router();
 
-const produtoController = require ("../controllers/produtoController")
+const produtoController = require("../controllers/produtoController");
 
-
-roteador.get ("/cadastrar", produtoController.Cadastrarproduto)
+roteador.get("/cadastrar", produtoController.Cadastrarproduto);
 
 // Rota para enviar os dados de cadastro
-roteador.post ("/cadastrar", produtoController.salvarproduto)
+roteador.post("/cadastrar", produtoController.salvarproduto);
 
 //R = LER USUÁRIOS
 // retorna as informações de todos os usuários
-roteador.get("/", produtoController.listarproduto)
+roteador.get("/", produtoController.listarproduto);
 
 // Retorna as informações de um usuário apenas
-roteador.get("/:id", produtoController.buscarproduto)
+roteador.get("/:id", produtoController.buscarproduto);
 
 // U = ATUALIZAR USUÁRIOS
-roteador.put("/:id", produtoController.atualizarproduto)
+roteador.put("/:id", produtoController.atualizarproduto);
 
 // D = DELETAR USUÁRIOS
-roteador.delete("/:id", produtoController.deletarproduto)
-
-
+roteador.delete("/:id", produtoController.deletarproduto);
 
 // Criando a exportação desse arquivo
-module.exports = roteador
+module.exports = roteador;

@@ -1,4 +1,3 @@
-
 const produtoModel = require("../models/produtoModel");
 
 module.exports = {

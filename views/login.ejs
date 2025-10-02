@@ -45,14 +45,20 @@
      >
      <!-- Fim da caixinha de senha -->
 
-
+    <!-- Caixinha de alerta só aparece se ele errar o login -->
     <button type="submit" class="btn btn-primary btn-lg mt-5"> Entrar </button>
+  </form>
 
-      </form>
-
-      <div class="alert alert-danger text-center mx-auto mt-3" style="width: 50%;">
-      Usuários ou senha Inválidos
+    <% if (typeof erro !== "undefined") { %>
+       <!-- caixinha de alerta -->
+       <div 
+       class="alert alert-danger text-center mx-auto mt-3"
+        style="width: 50%;">
+                    Usuários ou senha Inválidos
       </div>
+    <% } %>
+
+  
     </main>
 
     <footer></footer>
