@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary px-3">
+  <div class="container-fluid">
+    <!-- logo da empresa -->
+    <a class="navbar-brand" href="#">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6f/EA_Sports_monochrome_logo.svg"
+        alt="logo"
+        width="60"
+        height="60"
+      />
+
+      EA SPORTS
+    </a>
+<!-- fim da logo -->
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- OPÇÃO DE PAGINA PRINCIPAL -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        </li>
+       <!-- FIM DE OPÇÃO PÁGINA PRINCIPAL -->
+
+       <!-- OPÇÕES DE PAGINA PARA USUARIO -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Usuários
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/usuarios">Ver usuários</a></li>
+            <li><a class="dropdown-item" href="/usuarios/cadastrar">Criar usuários</a></li>
+           
+          </ul>
+        </li>
+
+
+         <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+          Produtos
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/produtos">Ver produto</a></li>
+            <li><a class="dropdown-item" href="/produtos/cadastrar">Criar produtos</a></li>
+           
+          </ul>
+        </li>
+
+        <!-- FIM DE OPÇÕES DE USUARIO -->
+       
+      </ul>
+        <!-- AREA DO BOTÃO DE SAIDA -->
+         <p class="text-muted mx-2 mb-lg-0">Usuarios: Samuel</p>
+         <button class="btn btn-danger">Sair</button>
+         <!-- FIM DE AREA DO BOTAO DE SAIR -->
+    </div>
+  </div>
+</nav>

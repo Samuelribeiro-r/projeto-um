@@ -6,7 +6,7 @@ const userModel = require ("../models/userModel")
 
 module.exports = {
     formLogin :  (req,res) => { 
-        res.render("login")
+        res.render("login", {titulo: "Login"})
     },
     // função para processar o login
     loginUsuario : (req,res) => {

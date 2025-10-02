@@ -33,34 +33,24 @@ app.set("views", path.join(__dirname, "views"))
 
 // criando o caminho para a pasta views
  app.get("/home", (req,res) =>{
-// criando uma rota
     res.status(200)
-    //  definindo o status da requisição
-    res.render("index")
+    res.render("index", {titulo: "Pagina inicial"})
 
  })
-// enviando o arquivo html como resposta
- app.get("/pokemon", (req,res) =>{
-    // criando uma rota
-    res.status(200)
-    //  definindo o status da requisição
-    res.sendFile("Charizard")
+ app.get('/', (req, res) => {
 
-
- })
+  res.status(200).render("index",  {titulo: "Pagina inicial"})
+})
+ 
  // enviando o arquivo html como resposta
  app.use((req,res) =>{
-    // criando uma rota
+    
     res.status(404)
-    // definido o status da requisição
-    res.render("404")
+    res.render("404",  {titulo: "Pagina de erro"})
  })
 
 // enviando o arquivo html como resposta
-app.get('/', (req, res) => {
-    // criando uma rota
-  res.status(200).send("Parabéns Você conseguiu")
-})
+
 // enviando uma mensagem como resposta
 app.listen(port, () => {
     // iniciando o servidor
