@@ -15,12 +15,13 @@ module.exports = {
     return logado;
   },
   // função para salvar um novo usuário
-  salvar: ({ usuario, email, senha }) => {
+  salvar: ({ usuario, email, senha, tipo }) => {
     const novoUsuario = {
       id: listausuarios.length + 1,
       usuario,
       email,
       senha,
+      tipo
     };
     listausuarios.push(novoUsuario);
     console.log("Novo usuario Salvo:", novoUsuario);

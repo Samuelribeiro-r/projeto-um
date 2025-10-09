@@ -28,13 +28,17 @@ module.exports = {
   },
   // função para processar o cadastro e visualizar na tela // CRUD
   formCadastro: (req, res) => {
-    res.render("cadastrar");
+    res.render("usuarios/cadastroUsuarios", { titulo: "Cadastro" });
   },
 
   salvarUsuario: (req, res) => {
-    const { usuario, email, senha } = req.body;
-    userModel.salvar({ usuario, email, senha });
-    res.render("cadastroConfirmado");
+    const { usuario, email, senha, tipo } = req.body;
+    usuarioNovo = userModel.salvar({ usuario, email, senha, tipo });
+    res.render("usuarios/confirmacaoUsuarios", { 
+      tipo: "cadastro",
+       titulo: "Cadastro confirmado", 
+      usuarioNovo      
+      });
   },
   listarUsuario: (req, res) => {
     const usuarios = userModel.listarTodos();
