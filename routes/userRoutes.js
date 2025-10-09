@@ -11,6 +11,7 @@ roteador.get("/login", userController.formLogin);
 roteador.post("/login", userController.loginUsuario);
 // rota pra solicitar a pagina de cadastro
 
+
 // CRUD
 
 // C = CRIAR NOVO USUÁRIO
@@ -36,3 +37,5 @@ roteador.delete("/:id", userController.deletarUsuario);
 
 // Criando a exportação desse arquivo
 module.exports = roteador;
+
+module.exports = roteador
