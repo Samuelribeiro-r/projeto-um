@@ -11,3 +11,4 @@ roteador.get("/login", userController.formLogin)
 roteador.post("/login", userController.loginUsuario)
 // rota pra solicitar a pagina de cadastro
 module.exports = roteador
+
