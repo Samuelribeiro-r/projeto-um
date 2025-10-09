@@ -1,0 +1,83 @@
+<%- include('../partials/header') %>
+
+<!-- Conteudo do index -->
+<main class="container d-flex flex-column flex-fill justify-content-center">
+<h1 class="text-center"> PAGINA DE CADASTRO DE PRODUTOS </h1>
+
+<!-- Criando um formulario para envio de informações -->
+<form action="/produtos/cadastrar" method="POST">
+    <div class="mb-3">
+        <!-- Caixinha de nome de usuarios -->
+    <label for="inputProdutos" class="form-label fs-2 mt-2">
+        Nome do Produto 
+    </label>
+    <input type="produtos"
+    id="inputProdutos"
+    class="form-control form-control-lg"
+    placeholder="Digite o nome do produto"  
+    name="produtos"
+    required
+    
+    >
+<!-- Fim de caixinha nome de usuario -->
+
+<!-- Caixinha de email -->
+ <label for="inputDescricao" class="form-label fs-2 mt-2"> Descrição </label>
+  <input type="descricao"
+    id="inputDescricao"
+    class="form-control form-control-lg"
+    placeholder="Digite a descrição do produto"  
+    name="descricao"
+    required
+    
+    />
+
+<label class="form-label fs-2 mt-2"> Categoria </label>
+  <select 
+    name="categoria"
+     class="form-select form-select-lg mb-3">
+    <option value="Alimentos"> Alimentos </option>
+    <option value="Bebidas"> Bebidas</option>
+    <option value="Eletrónicos"> Eletrónicos</option>
+  </select>
+
+
+  <label for="InputPreço" class="form-label fs-2 mt-2"> Preço </label>
+   <input type="preço"
+    id="inputPreço"
+    class="form-control form-control-lg"
+    placeholder="Digite o preço do produto"  
+    name="preço"
+    required
+    />
+    
+    <label for="Inputquantidade" class="form-label fs-2 mt-2"> Quantidade </label>
+   <input type="quantidade"
+    id="inputquantidade"
+    class="form-control form-control-lg"
+    placeholder="Digite a quantidade do produto"  
+    name="quantidade"
+    required
+
+    />
+
+     <label for="Inputimagem" class="form-label fs-2 mt-2"> Imagem do produto </label>
+   <input type="imagem"
+    id="inputimagem"
+    class="form-control form-control-lg"
+    placeholder="Digite o link da imagem do produto"  
+    name="imagem"
+    required
+    
+    />
+   
+     <!-- botão de envio  do formulario -->
+      <button type="submit" class="btn btn-lg btn-primary">
+        Cadastrar
+      </button>
+  </div>
+ </form>
+</main>
+
+<!-- rodape de todas as pagimas -->
+<%- include('../partials/footer') %>

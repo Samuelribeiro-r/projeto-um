@@ -1,20 +1,27 @@
 const produtoModel = require("../models/produtoModel");
 
 module.exports = {
+ // função para processar o cadastro e visualizar na tela // CRUD
   Cadastrarproduto: (req, res) => {
-    res.render("cadastrar");
+    res.render("produtos/cadastroProdutos", { titulo: "Cadastro" });
   },
 
+
   salvarproduto: (req, res) => {
-    const { nome, preço, quantidade, descricao, categoria } = req.body;
-    produtoModel.salvar({ nome, preço, quantidade, descricao, categoria });
-    res.render("cadastroConfirmado");
-  },
+    const { nome, preço, quantidade, descricao, categoria, url} = req.body;
+    produtoNovo = produtoModel.salvar({ nome, preço, quantidade, descricao, categoria, url});
+    res.render("produtos/cadastroConfirmado", {
+    tipo: "cadastro",
+     titulo: "Cadastro confirmado",
+    produtoNovo
+    }
+  )},
   listarproduto: (req, res) => {
     const produto = produtoModel.listarTodos();
     res.json(produto);
     res.render("produto", { produto });
   },
+
   buscarproduto: (req, res) => {
     // Busca o id de url como parametro
     const id = req.params.id;
@@ -40,7 +47,7 @@ module.exports = {
       preço,
       quantidade,
       descricao,
-      categoria,
+      categoria
     });
     // Se não achar, avisa que deu erro
     if (!produtoAtualizado) {

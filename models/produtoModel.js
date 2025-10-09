@@ -6,7 +6,7 @@ let listaprodutos = db.produtos;
 module.exports = {
   //funcao para validar o  login
   // função para salvar um novo usuário
-  salvar: ({ nome, preço, quantidade, descricao, categoria }) => {
+  salvar: ({ nome, preço, quantidade, descricao, categoria, url }) => {
     const novoProduto = {
       id: listaprodutos.lenght + 1,
       nome,
@@ -14,6 +14,8 @@ module.exports = {
       quantidade,
       descricao,
       categoria,
+      url
+      
     };
     listaprodutos.push(novoProduto);
     console.log("Novo produto Salvo:", novoProduto);
@@ -27,7 +29,7 @@ module.exports = {
   buscarPorId: (id) => {
     return listaprodutos.find((user) => user.id == id || null);
   },
-  atualizar: (id, { nome, preço, quantidade, descricao, categoria }) => {
+  atualizar: (id, { nome, preço, quantidade, descricao, categoria, url }) => {
     const index = listaprodutos.findIndex((user) => user.id == id);
     if (index === -1) return null;
 
@@ -40,6 +42,7 @@ module.exports = {
       listaprodutos: quantidade || listaprodutos[index].quantidade,
       listaprodutos: descricao || listaprodutos[index].descricao,
       listaprodutos: categoria || listaprodutos[index].categoria,
+      listaprodutos: url || listaprodutos[index].url
     };
     // Retporna o usuario atualizado
     return listaprodutos[index];

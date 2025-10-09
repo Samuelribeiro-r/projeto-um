@@ -9,6 +9,8 @@ roteador.get("/cadastrar", produtoController.Cadastrarproduto);
 // Rota para enviar os dados de cadastro
 roteador.post("/cadastrar", produtoController.salvarproduto);
 
+
+
 //R = LER USUÁRIOS
 // retorna as informações de todos os usuários
 roteador.get("/", produtoController.listarproduto);
