@@ -8,11 +8,12 @@ const port = 5000
  // criando uma porta para o servidor   
 const path = require('path')
 // importando o path
-const Caminho = path.join(__dirname, "views")
+const caminho = path.join(__dirname, "views")
 
 // importações
 // importa as rotas de usuário
 const userRoutes = require("./routes/userRoutes")
+const produtoRoutes = require("./routes/produtoRoutes")
 // cria uma rota principal para as sub rotas de usuario
 
 // Interpretador de json Para tratar as informações do body
@@ -20,6 +21,8 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
 app.use("/usuarios", userRoutes)
+
+app.use("/produtos", produtoRoutes)
 
 // definindo o ejs como view engine
 app.set('view engine', 'ejs')
@@ -30,34 +33,24 @@ app.set("views", path.join(__dirname, "views"))
 
 // criando o caminho para a pasta views
  app.get("/home", (req,res) =>{
-// criando uma rota
     res.status(200)
-    //  definindo o status da requisição
-    res.render("index")
+    res.render("index", {titulo: "Pagina inicial"})
 
  })
-// enviando o arquivo html como resposta
- app.get("/pokemon", (req,res) =>{
-    // criando uma rota
-    res.status(200)
-    //  definindo o status da requisição
-    res.sendFile("Charizard")
+ app.get('/', (req, res) => {
 
-
- })
+  res.status(200).render("index",  {titulo: "Pagina inicial"})
+})
+ 
  // enviando o arquivo html como resposta
  app.use((req,res) =>{
-    // criando uma rota
+    
     res.status(404)
-    // definido o status da requisição
-    res.render("404")
+    res.render("404",  {titulo: "Pagina de erro"})
  })
 
 // enviando o arquivo html como resposta
-app.get('/', (req, res) => {
-    // criando uma rota
-  res.status(200).send("Parabéns Você conseguiu")
-})
+
 // enviando uma mensagem como resposta
 app.listen(port, () => {
     // iniciando o servidor
