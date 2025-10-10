@@ -8,23 +8,22 @@
 <form action="/produtos/cadastrar" method="POST">
     <div class="mb-3">
         <!-- Caixinha de nome de usuarios -->
-    <label for="inputProdutos" class="form-label fs-2 mt-2">
+    <label for="inputNome" class="form-label fs-2 mt-2">
         Nome do Produto 
     </label>
-    <input type="produtos"
-    id="inputProdutos"
+    <input type="nome"
+    id="inputNome"
     class="form-control form-control-lg"
     placeholder="Digite o nome do produto"  
-    name="produtos"
+    name="nome"
     required
     
     >
-<!-- Fim de caixinha nome de usuario -->
 
-<!-- Caixinha de email -->
- <label for="inputDescricao" class="form-label fs-2 mt-2"> Descrição </label>
+
+ <label for="inputdescricao" class="form-label fs-2 mt-2"> Descrição </label>
   <input type="descricao"
-    id="inputDescricao"
+    id="inputdescricao"
     class="form-control form-control-lg"
     placeholder="Digite a descrição do produto"  
     name="descricao"
@@ -32,7 +31,10 @@
     
     />
 
-<label class="form-label fs-2 mt-2"> Categoria </label>
+<div class="row g-3">
+
+<div class="col-md-6">
+<label class="form-label fs-2 mt-2"> Categoria De produtos</label>
   <select 
     name="categoria"
      class="form-select form-select-lg mb-3">
@@ -40,18 +42,35 @@
     <option value="Bebidas"> Bebidas</option>
     <option value="Eletrónicos"> Eletrónicos</option>
   </select>
+</div>
 
+  <div class="col-md-6">
+ <label for="InputImagem" class="form-label fs-2 mt-2"> imagem </label>
+   <input type="imagem"
+    id="inputImagem"
+    class="form-control form-control-lg"
+    placeholder="Digite a url da imagem do produto"  
+    name="imagem"
+    required
+/>
+     
+    </div>
+  </div>
+</div>
 
-  <label for="InputPreço" class="form-label fs-2 mt-2"> Preço </label>
-   <input type="preço"
-    id="inputPreço"
+<div class="row g-3">
+  <div class="col-md-6">
+
+  <label for="Inputpreco" class="form-label fs-2"> Preço </label>
+   <input type="preco"
+    id="inputpreco"
     class="form-control form-control-lg"
     placeholder="Digite o preço do produto"  
-    name="preço"
+    name="preco"
     required
     />
-    
-    <label for="Inputquantidade" class="form-label fs-2 mt-2"> Quantidade </label>
+  
+<label for="Inputquantidade" class="form-label fs-2 mt-2"> Quantidade de produtos </label>
    <input type="quantidade"
     id="inputquantidade"
     class="form-control form-control-lg"
@@ -60,20 +79,21 @@
     required
 
     />
+  </div>
 
-     <label for="Inputimagem" class="form-label fs-2 mt-2"> Imagem do produto </label>
-   <input type="imagem"
-    id="inputimagem"
-    class="form-control form-control-lg"
-    placeholder="Digite o link da imagem do produto"  
-    name="imagem"
-    required
-    
-    />
+<div class="col-md-6">
    
-     <!-- botão de envio  do formulario -->
+    <img src="https://i.pinimg.com/originals/73/14/cc/7314cc1a88bf3cdc48347ab186e12e81.jpg" alt="" class="d-flex mx-auto mt-3" width="300" height="300">
+  
+ </div>
+</div>
+
+ <div class="row g-3">
+
+ </div>
+
       <button type="submit" class="btn btn-lg btn-primary">
-        Cadastrar
+          Cadastrar
       </button>
   </div>
  </form>

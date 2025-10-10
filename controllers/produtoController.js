@@ -8,9 +8,9 @@ module.exports = {
 
 
   salvarproduto: (req, res) => {
-    const { nome, preço, quantidade, descricao, categoria, url} = req.body;
-    produtoNovo = produtoModel.salvar({ nome, preço, quantidade, descricao, categoria, url});
-    res.render("produtos/cadastroConfirmado", {
+    const { nome, preco, quantidade, descricao, categoria, url} = req.body;
+    produtoNovo = produtoModel.salvar({ nome, preco, quantidade, descricao, categoria, url});
+    res.render("produtos/confirmacaoProdutos", {
     tipo: "cadastro",
      titulo: "Cadastro confirmado",
     produtoNovo
