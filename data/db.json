@@ -2,23 +2,26 @@
   "usuarios": [
     {
       "id": 1,
-      "nome": "Samuel",
+      "usuario": "Samuel",
       "email": "samuel@gmail.com",
-      "senha": "12"
+      "senha": "12",
+      "tipo": "Administrador"
     },
 
     {
       "id": 2,
-      "nome": "Caixinhas Brito",
+      "usuario": "Caixinhas Brito",
       "email": "caixinhas@gamil.com",
-      "senha": "12"
+      "senha": "12",
+      "tipo": "Gerente"
     },
 
     {
       "id": 3,
-      "nome": "FinisEFerb",
+      "usuario": "FinisEFerb",
       "email": "ferb@gmail.com",
-      "senha": "12"
+      "senha": "12",
+      "tipo": "Funcionário"
     }
   ],
 

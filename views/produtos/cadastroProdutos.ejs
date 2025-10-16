@@ -45,12 +45,12 @@
 </div>
 
   <div class="col-md-6">
- <label for="InputImagem" class="form-label fs-2 mt-2"> imagem </label>
-   <input type="imagem"
+ <label for="InputImagem" class="form-label fs-2 mt-2"> Imagem de produto </label>
+   <input type="url"
     id="inputImagem"
     class="form-control form-control-lg"
-    placeholder="Digite a url da imagem do produto"  
-    name="imagem"
+    placeholder="Digite a link da imagem do produto"  
+    name="ImagemUrl"
     required
 />
      
@@ -83,7 +83,11 @@
 
 <div class="col-md-6">
    
-    <img src="https://i.pinimg.com/originals/73/14/cc/7314cc1a88bf3cdc48347ab186e12e81.jpg" alt="" class="d-flex mx-auto mt-3" width="300" height="300">
+    <img src="https://i.pinimg.com/originals/73/14/cc/7314cc1a88bf3cdc48347ab186e12e81.jpg" 
+      id="previewImagem"
+      class="d-flex mx-auto mt-3" 
+      width="86%" 
+      height="300px">
   
  </div>
 </div>
@@ -97,6 +101,25 @@
       </button>
   </div>
  </form>
+
+ 
+ <!-- Codigo para imagem ser alterada de acordo com o que a pessoa colocar -->
+ <script>
+ // variavel para acessar o input da imagem 
+  const inputImagem = document.getElementById("inputImagem");
+// variavel para acessar a imagem
+  const previewImagem = document.getElementById("previewImagem");
+// variavel para imagem padrao, caso a pessoa nao coloque nada
+  const ImagemPadrao = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.autocompara.com.br%2Fcarros-esportivos%2F&psig=AOvVaw2_yCiAGl7zKkBemsfsaX3J&ust=1760550650857000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMiuxMKhpJADFQAAAAAdAAAAABAE"
+
+// Evento é disparado o usuario coloca algo da caixinha
+  inputImagem.addEventListener("input", () => {
+// Guarda o que a pessoa colocou na caixinha da variavel da url
+    const url = inputImagem.value
+// troca o valor de src da imagem , pelo que o usuario digitou na caixinha 
+    previewImagem.src = url || ImagemPadrao;
+  })
+ </script>
 </main>
 
 <!-- rodape de todas as pagimas -->

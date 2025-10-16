@@ -40,10 +40,13 @@ module.exports = {
       usuarioNovo      
       });
   },
+  // R
+  // Função para listar todos os usuários
   listarUsuario: (req, res) => {
+    // Guarda a lista de usuarios retornando depois de buscar pelo model
     const usuarios = userModel.listarTodos();
-    res.json(usuarios);
-    res.render("usuarios", { usuarios });
+   // Renderiza a view com a lista de usuários
+    res.render("usuarios/listaUsuarios", {usuarios, titulo: "Lista de Usuários"});
   },
   buscarUsuario: (req, res) => {
     // Busca o id de url como parametro
