@@ -17,14 +17,14 @@
  <% } else if (tipo == "edicao") { %>
     <h1 class="text-white">
       <!-- Pega o nome de quem foi atualizado, vindo do objetivo atualizado -->
-      Edição de <%- atualizado.produtos %> confirmado
+      Edição de <%- produtoAtualizado.nome %> confirmado
     </h1> 
 
     <!-- Se a pagina que chamou for a de deletar usuario, mostra que o usuário foi excluido -->
     <% } else { %>
     <h1
      class="text-white">
-      produto<%- deletado.produtos %> excluido 
+      produto <%- deletado.produtos %> excluido 
     </h1>
     <% } %>
 

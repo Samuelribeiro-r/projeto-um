@@ -1,0 +1,60 @@
+<%- include('../partials/header') %>
+
+<main class="container text-center mt-3">
+  <h1>Lista de Produtos</h1>
+  <a href="/produtos/cadastrar">
+    <button class="btn btn-lg btn-primary mt-2 mb-4">
+      <i class="bi bi-plus-circle"></i>
+      Cadastrar
+    </button>
+  </a>
+
+  <div class="d-flex flex-row flex-wrap gap-3 justify-content-center">
+    <% if (produtos && produtos.length > 0) { %> <% produtos.forEach(produto =>
+    { %>
+    <div class="card border-danger" style="width: 18rem">
+      <img
+        src="<%= produto.imagem %>"
+        class="card-img-top"
+        alt="imagem do produto"
+        width="600"
+        height="170"
+      />
+      <div class="card-body text-start">
+        <h5 class="card-title"><%= produto.nome %></h5>
+        <p class="card-text"><b>Descrição:</b> <%= produto.descricao %></p>
+        <p class="card-text"><b>Tipo:</b> <%= produto.categoria %></p>
+        <p class="card-text"><b>Preço:</b> R$ <%= produto.preco %></p>
+        <p class="card-text"><b>Quantidade:</b> <%= produto.quantidade %></p>
+
+      
+        <div class="d-flex">
+        
+          <a href="/produtos/<%= produto.id %> " style="text-decoration: none">
+            <button class="btn btn-sm btn-warning me-2">
+              <i class="bi bi-pencil-square"></i>
+              Editar
+            </button>
+          </a>
+
+         
+          <button
+            class="btn btn-sm btn-danger"
+            onclick="confirmaExclusao('<%= produto.nome %>', '<%= produto._id %>')"
+          >
+            <i class="bi bi-trash"></i>
+            Excluir
+          </button>
+        </div>
+      </div>
+    </div>
+    <% }) %> <% } else { %>
+  
+    <div class="alert alert-warning text-center mt-5">
+        Nenhum produto cadastrado.
+    </div>
+    <% } %>
+  </div>
+</main>
+
+<%- include('../partials/footer') %>

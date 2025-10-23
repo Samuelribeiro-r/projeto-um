@@ -8,8 +8,8 @@ module.exports = {
 
 
   salvarproduto: (req, res) => {
-    const { nome, preco, quantidade, descricao, categoria, url} = req.body;
-    produtoNovo = produtoModel.salvar({ nome, preco, quantidade, descricao, categoria, url});
+    const { nome, preco, quantidade, descricao, categoria, imagem} = req.body;
+    produtoNovo = produtoModel.salvar({ nome, preco, quantidade, descricao, categoria, imagem});
     res.render("produtos/confirmacaoProdutos", {
     tipo: "cadastro",
      titulo: "Cadastro confirmado",
@@ -17,9 +17,8 @@ module.exports = {
     }
   )},
   listarproduto: (req, res) => {
-    const produto = produtoModel.listarTodos();
-    res.json(produto);
-    res.render("produto", { produto });
+    const produtos = produtoModel.listarTodos();
+    res.render("produtos/listaProduto", { produtos, titulo: "Lista de Produtos" });
   },
 
   buscarproduto: (req, res) => {
@@ -29,32 +28,49 @@ module.exports = {
     const produto = produtoModel.buscarPorId(id);
     // Se não achar, avisa que deu erro
     if (!produto) {
-      return res.status(404).json({ mensagem: "Produto não encontrado" });
+      return res.status(404).render("produtos/erroProduto", {
+        titulo: "Erro",
+        mensagem: "Produto não encontrado"
+      });
     }
     // se achar, devolve as informações via json
-    res.json(produto);
+    res.render("produtos/editarproduto", {
+      titulo: "Editar",
+      produto
+    });
   },
-
   // Função para atualizar as informações de um usuário
   atualizarproduto: (req, res) => {
     // busca o id de url como parametro
     const id = req.params.id;
     // Busca as novas informações para atualizar
-    const { nome, preço, quantidade, descricao, categoria } = req.body;
+    const { nome, preco, quantidade, descricao, categoria, imagem } = req.body;
     // Guarda o usuario atualizado em uma variavel
     const produtoAtualizado = produtoModel.atualizar(id, {
       nome,
-      preço,
+      preco,
       quantidade,
       descricao,
-      categoria
+      categoria,
+      imagem
     });
     // Se não achar, avisa que deu erro
     if (!produtoAtualizado) {
-      return res.status(404).json({ mensagem: "Produto não encontrado" });
+      return res.status(404).render("produtos/erroProduto", {
+        titulo:"Erro",
+        mensagem: "Produto não encontrado"
+      } 
+
+      );
     }
     // se tudo der certo, devolve uma mensagem de sucesso
-    res.json({ mensagem: "Produto atualizado" });
+    res.render( "produtos/confirmacaoProdutos", {
+      titulo: "Edição Confirmada",
+      tipo: "edicao",
+      produtoAtualizado
+    }
+
+    );
   },
   // Função para deletar um usuário
   deletarproduto: (req, res) => {
@@ -68,6 +84,6 @@ module.exports = {
       return res.status(404).json({ mensagem: "Produto não encontrado" });
     }
     // se tudo der certo, devolve uma mensagem de sucesso
-    res.json({ mensagem: "Produto deletado" });
+    res.json({ deletando: deletando, mensagem: "Produto deletado" });
   },
 };

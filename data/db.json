@@ -29,28 +29,33 @@
     {
       "id": 1,
       "nome": "Shampoo do cr7",
-      "preço": 10.0,
+      "preco": 10,
       "quantidade": 5,
       "descricao": "esse e um shampoo do cr7 QUALIDADE GARANTIDA.",
-      "categoria": "Higiene Pessoal"
+      "categoria": "Higiene Pessoal",
+      "imagem":  "https://www.arenaatacado.com.br/on/demandware.static/-/Sites-storefront-catalog-sv/default/dw81b33c52/Produtos/501522-7891150019416-shampoo%20anticaspa%20clear%20men%20sports%20cristiano%20ronaldo%20limpeza%20profunda%20400ml-clear-5.jpg"
     },
 
     {
       "id": 2,
       "nome": "Caixa de som JBL",
-      "preço": 50.0,
+      "preco": 50,
       "quantidade": 2,
       "descricao": "Caixa de som JBL QUALIDADE GARANTIDA.",
-      "categoria": "Eletrónicos"
+      "categoria": "Eletrónicos",
+      "imagem":  "https://www.jbl.com.br/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwe0c72510/JBL_CHARGE5_WIFI_HERO%20_LEFT_37890_x3.png?sw=535&sh=535"
     },
 
     {
       "id": 3,
       "nome": "Teclado Gamer",
-      "preço": 100.0,
+      "preco": 100,
       "quantidade": 1,
       "descricao": "Teclado gamer Òtimo para jogadores malucos!!!!",
-      "categoria": "Informática"
+      "categoria": "Informática",
+      "imagem": "https://m.media-amazon.com/images/I/61Dvr-tmhQL._AC_SX679_.jpg"
+   
     }
   ]
 }
+  

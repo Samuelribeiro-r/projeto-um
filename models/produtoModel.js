@@ -6,15 +6,15 @@ let listaprodutos = db.produtos;
 module.exports = {
   //funcao para validar o  login
   // função para salvar um novo usuário
-  salvar: ({ nome, preço, quantidade, descricao, categoria, url }) => {
+  salvar: ({ nome, preco, quantidade, descricao, categoria, imagem }) => {
     const novoProduto = {
-      id: listaprodutos.lenght + 1,
+      id: listaprodutos.length + 1,
       nome,
-      preço,
+      preco,
       quantidade,
       descricao,
       categoria,
-      url
+      imagem
       
     };
     listaprodutos.push(novoProduto);
@@ -29,20 +29,20 @@ module.exports = {
   buscarPorId: (id) => {
     return listaprodutos.find((user) => user.id == id || null);
   },
-  atualizar: (id, { nome, preço, quantidade, descricao, categoria, url }) => {
+  atualizar: (id, { nome, preco, quantidade, descricao, categoria, imagem}) => {
     const index = listaprodutos.findIndex((user) => user.id == id);
     if (index === -1) return null;
 
     listaprodutos[index] = {
       ...listaprodutos[index],
 
-      listaprodutos: id || listaprodutos[index].id,
-      listaprodutos: nome || listaprodutos[index].nome,
-      listaprodutos: preço || listaprodutos[index].preço,
-      listaprodutos: quantidade || listaprodutos[index].quantidade,
-      listaprodutos: descricao || listaprodutos[index].descricao,
-      listaprodutos: categoria || listaprodutos[index].categoria,
-      listaprodutos: url || listaprodutos[index].url
+      nome: nome || listaprodutos[index].nome,
+      preco: preco || listaprodutos[index].preco,
+      quantidade: quantidade || listaprodutos[index].quantidade,
+      descricao: descricao || listaprodutos[index].descricao,
+      categoria: categoria || listaprodutos[index].categoria,
+      imagem: imagem || listaprodutos[index].imagem
+     
     };
     // Retporna o usuario atualizado
     return listaprodutos[index];

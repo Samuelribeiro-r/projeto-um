@@ -55,10 +55,16 @@ module.exports = {
     const usuario = userModel.buscarPorId(id);
     // Se não achar, avisa que deu erro
     if (!usuario) {
-      return res.status(404).json({ mensagem: "Usuário não encontrado" });
+      return res.status(404).render("usuarios/erroUsuario", {
+        titulo: "Erro",
+        mensagem: "Usuário não encontrado"
+      });
     }
     // se achar, devolve as informações via json
-    res.json(usuario);
+    res.render("usuarios/editarUsuarios", {
+      titulo: "Editar",
+      usuario
+    });
   },
 
   // Função para atualizar as informações de um usuário
@@ -66,19 +72,28 @@ module.exports = {
     // busca o id de url como parametro
     const id = req.params.id;
     // Busca as novas informações para atualizar
-    const { usuario, email, senha } = req.body;
+    const { usuario, email, senha, tipo } = req.body;
     // Guarda o usuario atualizado em uma variavel
     const usuarioAtualizado = userModel.atualizar(id, {
       usuario,
       email,
       senha,
+      tipo
     });
     // Se não achar, avisa que deu erro
-    if (!usuarioAtualizado) {
-      return res.status(404).json({ mensagem: "Usuário não encontrado" });
+   if (!usuarioAtualizado) {
+      return res.status(404).render("usuarios/erroUsuario",{
+        titulo: "Erro",
+        mensagem:"Não foi possível atualizar"
+      }
+      )
     }
-    // se tudo der certo, devolve uma mensagem de sucesso
-    res.json({ mensagem: "Usuário atualizado" });
+    // se atualizar, manda uma mensagem dizendo que deu certo
+    res.render("usuarios/confirmacaoUsuarios",{
+      titulo:"Edicao Confirmada",
+      tipo: "edicao",
+      usuarioAtualizado
+    })
   },
   // Função para deletar um usuário
   deletarUsuario: (req, res) => {
@@ -92,6 +107,6 @@ module.exports = {
       return res.status(404).json({ mensagem: "Usuário não encontrado" });
     }
     // se tudo der certo, devolve uma mensagem de sucesso
-    res.json({ mensagem: "Usuário deletado" });
+ res.json({ deletando: deletando, mensagem: "Usuário foi deletado" });
   },
 };
