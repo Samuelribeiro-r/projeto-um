@@ -81,9 +81,20 @@ module.exports = {
 
     // se não achar, avisa que deu erro
     if (!deletando) {
-      return res.status(404).json({ mensagem: "Produto não encontrado" });
+     return res.status(404).render("produtos/erroProduto", {
+        titulo:"Erro",
+        mensagem: "não foi possivel deletar o produto"
+      } 
+
+      );
     }
     // se tudo der certo, devolve uma mensagem de sucesso
-    res.json({ deletando: deletando, mensagem: "Produto deletado" });
+    res.render( "produtos/confirmacaoProdutos", {
+      titulo: "deletado Confirmado",
+      tipo: "deletar",
+      deletando
+    }
+
+    );
   },
 };

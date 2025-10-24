@@ -33,9 +33,8 @@ roteador.get("/:id", userController.buscarUsuario);
 roteador.put("/:id", userController.atualizarUsuario);
 
 // D = DELETAR USUÁRIOS
-roteador.delete("/:id", userController.deletarUsuario);
+roteador.get("/deletar/:id", userController.deletarUsuario);
 
 // Criando a exportação desse arquivo
-module.exports = roteador;
-
 module.exports = roteador
+

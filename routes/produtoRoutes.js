@@ -22,7 +22,7 @@ roteador.get("/:id", produtoController.buscarproduto);
 roteador.post("/:id", produtoController.atualizarproduto);
 
 // D = DELETAR USUÁRIOS
-roteador.get("/:id", produtoController.deletarproduto);
+roteador.get("/deletar/:id", produtoController.deletarproduto);
 
 // Criando a exportação desse arquivo
 module.exports = roteador;

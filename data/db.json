@@ -28,34 +28,129 @@
   "produtos": [
     {
       "id": 1,
-      "nome": "Shampoo do cr7",
+      "nome": "Bola de Futebol da Penalty",
       "preco": 10,
       "quantidade": 5,
-      "descricao": "esse e um shampoo do cr7 QUALIDADE GARANTIDA.",
-      "categoria": "Higiene Pessoal",
-      "imagem":  "https://www.arenaatacado.com.br/on/demandware.static/-/Sites-storefront-catalog-sv/default/dw81b33c52/Produtos/501522-7891150019416-shampoo%20anticaspa%20clear%20men%20sports%20cristiano%20ronaldo%20limpeza%20profunda%20400ml-clear-5.jpg"
+      "descricao": "Bola de futebol oficial, ideal para jogos em campo.",
+      "categoria": "Esportes",
+      "imagem":  "https://images.tcdn.com.br/img/img_prod/1376235/bola_de_futebol_campo_penalty_tornado_2977_1_78f4843506c6bf50254d0c8141e8124b.jpg"
     },
 
     {
       "id": 2,
-      "nome": "Caixa de som JBL",
+      "nome": "Camisa de time BlackAir",
       "preco": 50,
-      "quantidade": 2,
-      "descricao": "Caixa de som JBL QUALIDADE GARANTIDA.",
-      "categoria": "Eletrónicos",
-      "imagem":  "https://www.jbl.com.br/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwe0c72510/JBL_CHARGE5_WIFI_HERO%20_LEFT_37890_x3.png?sw=535&sh=535"
+      "quantidade": 1,
+      "descricao": "Camisa de time BlackAir vermelha, perfeita para jogar futebol com os amigos.",
+      "categoria": "Roupas",
+      "imagem":  "https://uzistore.com.br/cdn/shop/files/camisa-de-time-blackair-vermelha-7.jpg?v=1737057827"
     },
 
     {
-      "id": 3,
-      "nome": "Teclado Gamer",
+      "id": 3, 
+      "nome": "Camisa de time BlueSky",
       "preco": 100,
       "quantidade": 1,
-      "descricao": "Teclado gamer Òtimo para jogadores malucos!!!!",
-      "categoria": "Informática",
-      "imagem": "https://m.media-amazon.com/images/I/61Dvr-tmhQL._AC_SX679_.jpg"
+      "descricao": "Camisa de time BlueSky azul, ideal para jogos de futebol em campo.",
+      "categoria": "Roupas",
+      "imagem": "https://down-br.img.susercontent.com/file/cn-11134207-7qukw-lfxk304l7pqg75"
    
+    },
+
+     {
+      "id": 4, 
+      "nome": "Camisa de time Itália",
+      "preco": 100,
+      "quantidade": 1,
+      "descricao": "Camisa de time Itália branca, perfeita para jogar futebol e curtir um Role com os amigos.",
+      "categoria": "Roupas",
+      "imagem": "https://cdn.awsli.com.br/2500x2500/1890/1890260/produto/150976288/1f09ee107f.jpg"
+   
+    },
+
+    {
+      "id": 5, 
+      "nome": "Camisa de time Home Jersey",
+      "preco": 100,
+      "quantidade": 1,
+      "descricao": "Camisa de time Home Jersey branca, ideal para jogos de futebol em campo.",
+      "categoria": "Roupas",
+      "imagem": "https://cf.shopee.com.br/file/sg-11134201-22110-3ftea6t2jljvfd"
+   
+    },
+
+    {
+      "id": 6,
+      "nome": "Tênis de Corrida SpeedRun",
+      "preco": 150.00,
+      "quantidade": 3,
+      "descricao": "Tênis de corrida SpeedRun, leve e confortável para suas atividades esportivas.",
+      "categoria": "Causados",
+      "imagem": "https://tritonsports.com.br/cdn/shop/files/S291d59560c3d410182ea04d1f832ced7B.webp?v=1711650782"
+    },
+
+    {
+      "id": 7,
+      "nome": "Mochila",
+      "preco": 80.98,
+      "quantidade": 2,
+      "descricao": "Mochila, perfeita para trilhas e aventuras ao ar livre.",
+      "categoria": "Acessórios",
+      "imagem": "https://cloviscalcados.vteximg.com.br/arquivos/ids/1168476/Mochila-Masculina-Royal-Style-3509-1233509_001-01.jpg?v=638647853455070000"
+    },
+
+    {
+      "id": 8,
+      "nome": "Chuteira",
+      "preco": 800.94,
+      "quantidade": 2,
+      "descricao": "Domine o jogo com precisão e conforto.",
+      "categoria": "Causados",
+      "imagem": "https://images.tcdn.com.br/img/img_prod/671591/chuteira_campo_explore_solado_pvc_bicolor_pt_br_07001_15499_variacao_99027_2_ee681fbdb5d0c2c49829b0e0bea147c1.jpg"
+    },
+
+    {
+      "id": 9,
+      "nome": "Caneleira",
+      "preco": 97.56,
+      "quantidade": 2,
+      "descricao": "Curtir é uma peça anatômica que cobre a parte frontal da perna, entre o tornozelo e o joelho.",
+      "categoria": "Acessórios",
+      "imagem": "https://imgcentauro-a.akamaihd.net/1200x1200/97962551A4.jpg"
+    },
+
+    {
+      "id": 10,
+      "nome": "Bola de Futebol 7Poker",
+      "preco": 200.88,
+      "quantidade": 2,
+      "descricao": "Bola de futebol, ideal para jogos em campo.",
+      "categoria": "Esportes",
+      "imagem": "https://images.tcdn.com.br/img/img_prod/671591/bola_futebol_de_society_fusionada_profissional_6_gomos_rise_05853_15683_1_8f1af032a20981922faaa39977c675ae.jpg"
+    },
+
+  {
+      "id": 11,
+      "nome": "Tênis",
+      "preco": 99.95,
+      "quantidade": 2,
+      "descricao": "O Tênis é um calçado versátil desenvolvido para proporcionar conforto, proteção e desempenho.",
+      "categoria": "Causados",
+      "imagem": "https://img.irroba.com.br/fit-in/600x600/filters:fill(fff):quality(80)/evolaioe/catalog/produtos/masculino/1000/1000-blk-3.jpeg"
+    },
+
+    {
+      "id": 12,
+      "nome": "Relógio",
+      "preco": 567.90,
+      "quantidade": 2,
+      "descricao": "Instrumento utilizado para medir, registrar e indicar o tempo..",
+      "categoria": "Acessórios",
+      "imagem": "https://exame.com/wp-content/uploads/2016/10/relogio.jpg?quality=70&strip=all"
     }
+
+
+
   ]
 }
   
